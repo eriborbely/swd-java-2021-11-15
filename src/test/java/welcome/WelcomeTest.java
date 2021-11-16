@@ -9,15 +9,22 @@ import java.net.URL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SeleniumTest
-class HtmlIntroTest {
+class WelcomeTest {
 
 
     @Test
     void testTypeToInputThenCheckValue(WebDriver driver, URL url){
-        driver.get(url + "/htmlintro");
+        driver.get(url + "/welcome");
 
-        var input = driver.findElement(By.id("email-input"));
-        input.sendKeys("example@example.com");
+        var input = driver.findElement(By.id("name-input"));
+        input.sendKeys("teszt");
+
+        var submit = driver.findElement(By.id("welcome-button"));
+        submit.click();
+
+        var text = driver.findElement(By.id("welcome-div"));
+
+        assertEquals("Hello teszt!", text.getText());
 
 
     }
