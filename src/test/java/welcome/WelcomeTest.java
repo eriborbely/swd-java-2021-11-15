@@ -26,8 +26,8 @@ class WelcomeTest {
 
         assertEquals("Hello teszt!", text.getText());
 
-
     }
+
 
 
 
