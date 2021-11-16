@@ -42,6 +42,7 @@ class SimpleFixtureTest {
 
 
     @Test
+//  @RepeatedIfExceptionsTest(repeats = 3)
     void testHeader(){
         driver.get("https://eriborbely.github.io/swd-java-2021-11-15");
 
